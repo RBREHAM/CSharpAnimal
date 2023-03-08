@@ -1,11 +1,11 @@
-﻿namespace CSharpAnimal.Models
+﻿namespace CSharpAnimal.Models.Animals
 {
     abstract public class Animal
     {
 
         public Animal()
         {
-            this.name = "Cat";
+            name = "Cat";
         }
 
         public Animal(string name)

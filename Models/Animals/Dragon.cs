@@ -1,12 +1,19 @@
-﻿namespace CSharpAnimal.Models.Animals
+﻿using CSharpAnimal.Models.Vehicules;
+
+namespace CSharpAnimal.Models.Animals
 {
-    class Dragon : Animal
+    class Dragon : Animal, IPilotage
     {
         public Dragon()
         {
             dragonName = "Dragon";
         }
         public string dragonName { get; private set; }
+
+        public void Moove()
+        {
+            Console.WriteLine("allons y lessgooo");
+        }
 
         public override void Move()
         {

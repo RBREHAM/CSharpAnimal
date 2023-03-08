@@ -1,4 +1,5 @@
 ﻿using CSharpAnimal.Models.Animals;
+using CSharpAnimal;
 
 class Program
 {
@@ -15,6 +16,7 @@ class Program
 
         myAnimal2.Sleep();
         myAnimal2.Move();
+        myAnimal2.Moove();
         Console.WriteLine(myAnimal2.dragonName);
 
     }
