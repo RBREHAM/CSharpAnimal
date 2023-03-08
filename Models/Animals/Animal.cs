@@ -8,12 +8,13 @@
             name = "Cat";
         }
 
-        public Animal(string name)
+        public Animal(string name, string rarity)
         {
             this.name = name;
         }
 
         public string name { get; set; }
+        public string rarity { get; set; }
 
         public virtual void Move()
         {
@@ -21,6 +22,11 @@
         }
 
         public virtual void Sleep()
+        {
+            Console.WriteLine("Sleep !");
+        }
+
+        public virtual void Rarity()
         {
             Console.WriteLine("Sleep !");
         }

@@ -4,9 +4,10 @@ namespace CSharpAnimal.Models.Animals
 {
     class Dragon : Animal, IPilotage
     {
-        public Dragon()
+        public Dragon(string rarity)
         {
             dragonName = "Dragon";
+            this.rarity = rarity;
         }
         public string dragonName { get; private set; }
 

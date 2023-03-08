@@ -2,9 +2,10 @@
 {
     class Griffin : Animal
     {
-        public Griffin()
+        public Griffin(string rarity)
         {
             griffinName = "Griffin";
+            this.rarity = rarity;
         }
 
 
