@@ -2,12 +2,12 @@
 
 namespace CSharpAnimal.Models.Animals
 {
-    class Griffin : Animal, IFly
+    class Bird : Animal, IFly
     {
-        public Griffin(string name, int age, int id)
+        public Bird(string name, int age, int id)
         {
             this.Name = name;
-            this.Rare = "Legendary";
+            this.Rare = "common";
             this.Age = age;
             this.Id = id;
         }

@@ -2,7 +2,7 @@
 
 namespace CSharpAnimal.Models.Animals
 {
-    class Dragon : Animal, IPilotage
+    class Dragon : Animal, IPilotage, IFly
     {
         public Dragon(string name, int age, int id)
         {
@@ -25,6 +25,11 @@ namespace CSharpAnimal.Models.Animals
         public new void Sleep()
         {
             Console.WriteLine($"{Name} sleep");
+        }
+
+        public void Fly()
+        {
+            Console.WriteLine("On décole !");
         }
     }
 }

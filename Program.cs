@@ -8,6 +8,7 @@ class Program
 
         griffin1.Sleep();
         griffin1.Move();
+        griffin1.Fly();
         Console.WriteLine(griffin1.Name);
 
 
@@ -16,6 +17,7 @@ class Program
         dragon1.Sleep();
         dragon1.Move();
         dragon1.Moove();
+        dragon1.Fly();
         Console.WriteLine(dragon1.Name);
 
         Console.WriteLine("");
@@ -64,6 +66,25 @@ class Program
             Console.WriteLine(animal.Name);
         }
 
+        Console.WriteLine("");
+
+        Bird bird1 = new Bird("Pioupiou", 1, 8);
+
+        bird1.Sleep();
+        bird1.Move();
+        bird1.Fly();
+        Console.WriteLine(bird1.Name);
+
+        Console.WriteLine("");
+
+        Eagle eagle1 = new Eagle("Desert", 10, 9);
+
+        eagle1.Sleep();
+        eagle1.Move();
+        eagle1.Fly();
+        Console.WriteLine(eagle1.Name);
+
+        Console.WriteLine("");
 
     }
 
