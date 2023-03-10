@@ -5,16 +5,13 @@
 
         public Animal()
         {
-            name = "Cat";
+            this.Rare = "Cat";
         }
 
-        public Animal(string name, string rarity)
-        {
-            this.name = name;
-        }
-
-        public string name { get; set; }
-        public string rarity { get; set; }
+        public string Name { get; protected set; }
+        public string Rare { get; protected set; }
+        public int Age { get; protected set; }
+        public int Id { get; protected set; }
 
         public virtual void Move()
         {

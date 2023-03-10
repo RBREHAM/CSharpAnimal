@@ -2,23 +2,22 @@
 {
     class Griffin : Animal
     {
-        public Griffin(string rarity)
+        public Griffin(string name, int age, int id)
         {
-            griffinName = "Griffin";
-            this.rarity = rarity;
+            this.Name = name;
+            this.Rare = "Legendary";
+            this.Age = age;
+            this.Id = id;
         }
-
-
-        public string griffinName { get; private set; }
 
         public override void Move()
         {
-            Console.WriteLine($"{griffinName} move");
+            Console.WriteLine($"{Name} move");
         }
 
         public new void Sleep()
         {
-            Console.WriteLine($"{griffinName} sleep");
+            Console.WriteLine($"{Name} sleep");
         }
     }
 }

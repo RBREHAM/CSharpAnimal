@@ -1,43 +1,42 @@
 ﻿using CSharpAnimal.Models.Animals;
-using CSharpAnimal;
 
 class Program
 {
     static void Main(string[] args)
     {
-        Griffin griffin1 = new Griffin("legendary");
+        Griffin griffin1 = new Griffin("Peter", 500, 1);
 
         griffin1.Sleep();
         griffin1.Move();
-        Console.WriteLine(griffin1.griffinName);
+        Console.WriteLine(griffin1.Name);
 
 
-        Dragon dragon1 = new Dragon("rare");
+        Dragon dragon1 = new Dragon("Dragy", 30000, 2);
 
         dragon1.Sleep();
         dragon1.Move();
         dragon1.Moove();
-        Console.WriteLine(dragon1.dragonName);
+        Console.WriteLine(dragon1.Name);
 
         Console.WriteLine("");
 
 
-        Dog dog1 = new Dog("Odin", "common");
-        Dog dog2 = new Dog("TomTom", "common");
-        Dog dog3 = new Dog("Eliot", "common");
-        Dog dog4 = new Dog("Snow", "common");
-        Dog dog5 = new Dog("Fraya", "common");
+        Dog dog1 = new Dog("Odin", 4, 3);
+        Dog dog2 = new Dog("TomTom", 12, 4);
+        Dog dog3 = new Dog("Eliot", 14, 5);
+        Dog dog4 = new Dog("Snow", 2, 6);
+        Dog dog5 = new Dog("Fraya", 7, 7);
 
         Dog[] dogs = { dog1, dog2, dog3, dog4, dog5 };
 
         IEnumerable<Dog> showable =
             from dog in dogs
-            where dog.name != "Snow"
+            where dog.Name != "Snow"
             select dog;
 
         foreach(Dog dog in showable)
         {
-            Console.WriteLine(dog.name);
+            Console.WriteLine(dog.Name);
         }
 
 
@@ -47,12 +46,22 @@ class Program
         Animal[] animals = { griffin1, dragon1, dog1, dog2, dog3, dog4, dog5 };
         IEnumerable<Animal> showable2 =
             from animal in animals
-            where animal.rarity == "rare"
+            where animal.Rare == "Rare"
             select animal;
 
         foreach (Animal animal in showable2)
         {
-            Console.WriteLine(animal.name);
+            Console.WriteLine(animal.Name);
+        }
+
+
+        Console.WriteLine("");
+
+        var sortedliste = animals.OrderByDescending(c => c.Age).ToList();
+
+        foreach (Animal animal in sortedliste)
+        {
+            Console.WriteLine(animal.Name);
         }
 
 

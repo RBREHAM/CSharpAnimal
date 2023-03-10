@@ -4,12 +4,13 @@ namespace CSharpAnimal.Models.Animals
 {
     class Dragon : Animal, IPilotage
     {
-        public Dragon(string rarity)
+        public Dragon(string name, int age, int id)
         {
-            dragonName = "Dragon";
-            this.rarity = rarity;
+            this.Name = name;
+            this.Rare = "Rare";
+            this.Age = age;
+            this.Id = id;
         }
-        public string dragonName { get; private set; }
 
         public void Moove()
         {
@@ -18,12 +19,12 @@ namespace CSharpAnimal.Models.Animals
 
         public override void Move()
         {
-            Console.WriteLine($"{dragonName} move");
+            Console.WriteLine($"{Name} move");
         }
 
         public new void Sleep()
         {
-            Console.WriteLine($"{dragonName} sleep");
+            Console.WriteLine($"{Name} sleep");
         }
     }
 }

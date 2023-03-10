@@ -2,10 +2,13 @@
 {
     class Dog : Animal
     {
-        public Dog(string name, string rarity)
+        public Dog(string name, int age, int id)
         {
-            this.name = name;
-            this.rarity = rarity;
+            this.Name = name;
+            this.Rare = "Common";
+            this.Age = age;
+            this.Id = id;
         }
+
     }
 }
