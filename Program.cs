@@ -6,14 +6,24 @@ class Program
     {
         Griffin griffin1 = new Griffin("Peter", 500, 1);
 
+        Console.WriteLine("Griffin class call :");
         griffin1.Sleep();
         griffin1.Move();
         griffin1.Fly();
         Console.WriteLine(griffin1.Name);
 
+        Console.WriteLine("");
+
+
+
+
+
+
+
 
         Dragon dragon1 = new Dragon("Dragy", 30000, 2);
 
+        Console.WriteLine("Dragon class call :");
         dragon1.Sleep();
         dragon1.Move();
         dragon1.Moove();
@@ -21,6 +31,13 @@ class Program
         Console.WriteLine(dragon1.Name);
 
         Console.WriteLine("");
+
+
+
+
+
+
+
 
 
         Dog dog1 = new Dog("Odin", 4, 3);
@@ -36,7 +53,8 @@ class Program
             where dog.Name != "Snow"
             select dog;
 
-        foreach(Dog dog in showable)
+        Console.WriteLine("All dog names except Snow :");
+        foreach (Dog dog in showable)
         {
             Console.WriteLine(dog.Name);
         }
@@ -45,26 +63,40 @@ class Program
         Console.WriteLine("");
 
 
-        Animal[] animals = { griffin1, dragon1, dog1, dog2, dog3, dog4, dog5 };
-        IEnumerable<Animal> showable2 =
-            from animal in animals
-            where animal.Rare == "Rare"
-            select animal;
 
+
+
+
+
+
+        Animal[] animals = { griffin1, dragon1, dog1, dog2, dog3, dog4, dog5 };
+        IEnumerable<Animal> showable2 = animals.Where(animal => animal.Rare == "Rare");
+
+        Console.WriteLine("Rare animal(s) name and ID :");
         foreach (Animal animal in showable2)
         {
             Console.WriteLine(animal.Name);
+            Console.WriteLine(animal.Id);
         }
 
 
         Console.WriteLine("");
 
-        var sortedliste = animals.OrderByDescending(c => c.Age).ToList();
+        var sortedliste = from animal in animals.OrderByDescending(c => c.Age).ToList()
+                          where animal.Rare == "Common"
+                          select animal;
 
+        Console.WriteLine("Common animal(s) name :");
         foreach (Animal animal in sortedliste)
         {
             Console.WriteLine(animal.Name);
         }
+
+
+
+
+
+
 
         Console.WriteLine("");
 

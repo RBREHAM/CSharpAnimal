@@ -7,7 +7,7 @@ namespace CSharpAnimal.Models.Animals
         public Bird(string name, int age, int id)
         {
             this.Name = name;
-            this.Rare = "common";
+            this.Rare = "Common";
             this.Age = age;
             this.Id = id;
         }
